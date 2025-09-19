@@ -216,7 +216,7 @@ If you want to have the __development version__ installed on your computer, thes
 Installation (optional, for development version)
 ====
 
-This part describes how to install instantclient, CX_Oracle and some others python libraries on __Ubuntu__ in order to have the ODAT development version. 
+This part describes how to install instantclient, oracledb and some others python libraries on __Ubuntu__ in order to have the ODAT development version. 
 Don't forget that an ODAT standalone version exists at [https://github.com/quentinhardy/odat/releases/](https://github.com/quentinhardy/odat/releases/): __It is not required to install something for use the standalone version__
 
 * Clone the repository to get the ODAT source code:
@@ -274,16 +274,16 @@ export PATH=${ORACLE_HOME}bin:$PATH
 sudo ldconfig
 ```
 
-* Install *CX_Oracle*
+* Install *oracledb* (python-oracledb is Oracle’s official replacement for cx_Oracle.)
 ```bash
 sudo -s
 source /etc/profile
-pip3 install cx_Oracle
+pip3 install oracledb
 ```
 
 * Test if all is good:
 ```bash
-python3 -c 'import cx_Oracle' 
+python3 -c 'import oracledb' 
 ```
 > This command should *just return* without errors.
 
