@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 from DirectoryManagement import DirectoryManagement
-import logging,cx_Oracle
+import logging
+import oracledb as cx_Oracle
 #from OracleDatabase import OracleDatabase
 from Utils import ErrorSQLRequest, checkOptionsGivenByTheUser
 from Constants import *

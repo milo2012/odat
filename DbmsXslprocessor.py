@@ -5,7 +5,7 @@ from DirectoryManagement import DirectoryManagement
 import logging, random, string 
 from Utils import checkOptionsGivenByTheUser
 from Constants import *
-import cx_Oracle
+import oracledb as cx_Oracle
 from Utils import ErrorSQLRequest
 
 class DbmsXslprocessor (DirectoryManagement):	

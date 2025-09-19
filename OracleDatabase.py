@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import logging, random, string, cx_Oracle
+import logging, random, string
+import oracledb as cx_Oracle
 
 '''
 try:

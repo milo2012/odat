@@ -21,7 +21,8 @@ try:
 except ImportError:
 	COLORLOG_AVAILABLE = False
 
-import argparse, logging, platform, cx_Oracle, string, os, sys
+import argparse, logging, platform, string, os, sys
+import oracledb as cx_Oracle
 from libnmap.parser import NmapParser
 from Utils import (areEquals,
 				   configureLogging,

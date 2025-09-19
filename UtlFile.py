@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 from DirectoryManagement import DirectoryManagement
-import logging, random, string, cx_Oracle
+import logging, random, string
+import oracledb as cx_Oracle
 from hashlib import md5
 from Utils import ErrorSQLRequest, checkOptionsGivenByTheUser
 from Constants import *

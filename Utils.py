@@ -6,7 +6,8 @@ from socket import gethostbyname
 from sys import exit
 from sys import stdout
 from datetime import datetime
-import os.path, cx_Oracle
+import os.path
+import oracledb as cx_Oracle
 if os.name == 'nt':
 	import ntpath
 from subprocess import STDOUT, Popen, PIPE

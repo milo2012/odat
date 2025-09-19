@@ -11,7 +11,7 @@ from threading import Thread
 from progressbar import *
 from os import geteuid
 from Constants import *
-import cx_Oracle
+import oracledb as cx_Oracle
 
 #Load scapy without warnings
 tempout = sys.stdout; temperr = sys.stderr
