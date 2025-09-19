@@ -199,9 +199,6 @@ The ODAT standalone has been generated thanks to *pyinstaller*.
 
 If you want to have the __development version__ installed on your computer, these following tools and dependencies are needed:
 * Langage: Python 3
-* Oracle dependancies: 
-  * Instant Oracle basic
-  * Instant Oracle sdk
 * Python libraries: 
   * oracledb (Switch from cx_Oracle to python-oracledb python-oracledb is Oracle’s official replacement for cx_Oracle. It supports pure Python mode (no Oracle Client) and thin mode (no Instant Client), making it compatible with Apple Silicon.)
   * passlib
