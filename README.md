@@ -228,47 +228,17 @@ git submodule init
 git submodule update
 ```
 
-* Get instant client basic, sdk (devel) and sqlplus from the Oracle web site:
-  * X64: http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html
-  * X86: http://www.oracle.com/technetwork/topics/linuxsoft-082809.html
-  
-* For the moment (03/2021), Oracle Database instant client version 11.2 is the best version if you want to generate the ODAT standalone with pyinstaller.
-For using the ODAT development version, the last version of the Oracle client can be used (e.g. version 19).
+* Get instant client basic:
+  * Mac: https://www.oracle.com/database/technologies/instant-client/macos-arm64-downloads.html
 
 * Install *python3-dev*, *alien* and *libaio1* package (for sqlplus):
 ```bash
 sudo apt-get install libaio1 python3-dev alien python3-pip
 ```
 
-* Generate DEB files from RPM files with :
-```bash
-sudo alien --to-deb oracle-instantclient19.3-basic-???.x???.rpm
-sudo alien --to-deb oracle-instantclient19.3-devel-???.x???.rpm
-```
-
-* Install instant client basic, sdk and sqlplus:
-```bash
-sudo dpkg -i oracle-instantclient19.3-basic-???.x???.deb
-sudo dpkg -i oracle-instantclient19.3-devel_???_???.deb
-```
-
 * Put these lines in your */etc/profile* file in order to define Oracle *env* variables:
 ```bash
-export ORACLE_HOME=/usr/lib/oracle/19.3/client64/
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME/lib
-export PATH=${ORACLE_HOME}bin:$PATH
-```
-
-* Restart your session (to apply env variables)
-
-* Create the */etc/ld.so.conf.d/oracle.conf* file and add the path to Oracle home:
-```
-/usr/lib/oracle/19.3/client64/lib/
-```
-
-* Update the ldpath using:
-```bash
-sudo ldconfig
+export DYLD_LIBRARY_PATH="/pentest/instantclient:$DYLD_LIBRARY_PATH"
 ```
 
 * Install *oracledb* (python-oracledb is Oracle’s official replacement for cx_Oracle.)
